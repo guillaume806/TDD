@@ -2,6 +2,8 @@ import org.example.Product;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
+
 public class ProductTest {
 
     @Test
@@ -19,6 +21,14 @@ public class ProductTest {
         expiredProduct.update();
         assertEquals(-1, expiredProduct.getSellIn());
         assertEquals(18, expiredProduct.getQuality());
+    }
+
+    @Test
+    public void testUpdateBrie() {
+        Product brie = new Product("Brie", 5, 30);
+        brie.update();
+        assertEquals(4, brie.getSellIn());
+        assertEquals(31, brie.getQuality());
     }
 
 }
