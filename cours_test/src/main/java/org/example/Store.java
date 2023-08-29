@@ -1,4 +1,5 @@
-package org.example.;
+/*
+package org.example;
 import org.example.Product;
 public class Store {
     Product product = new Product();
@@ -34,3 +35,4 @@ public class Store {
         }
     }
 }
+*/
