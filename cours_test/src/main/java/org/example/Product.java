@@ -10,6 +10,10 @@ public class Product {
         this.quality = quality;
     }
 
+    public Product() {
+
+    }
+
     public int getSellIn() {
         return sellIn;
     }
@@ -18,35 +22,5 @@ public class Product {
         return quality;
     }
 
-    public void update() {
 
-        if (!name.equals("pomme")) {
-            sellIn--;
-
-            if (quality > 0) {
-                if (!name.equals("Brie") && !name.equals("Date passes")) {
-                    quality--;
-                    if (sellIn <= 0) {
-                        quality--;
-                    }
-                } else {
-                    if (quality < 50) {
-                        quality++;
-                        if (name.equals("Date passes")) {
-                            if (sellIn < 11) {
-                                if (quality < 50) {
-                                    quality++;
-                                }
-                            }
-                            if (sellIn < 6) {
-                                if (quality < 50) {
-                                    quality++;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }

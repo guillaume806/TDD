@@ -31,4 +31,12 @@ public class ProductTest {
         assertEquals(31, brie.getQuality());
     }
 
+    @Test
+    public void testUpdateBackstagePasses() {
+        Product passes = new Product("Date passes", 11, 25);
+        passes.update();
+        assertEquals(10, passes.getSellIn());
+        assertEquals(26, passes.getQuality());
+    }
+
 }
